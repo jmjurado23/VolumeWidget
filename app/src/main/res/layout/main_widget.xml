@@ -14,16 +14,6 @@
         android:layout_weight="1"
         android:padding="20dp" >
 
-        <TextView
-            android:id="@+id/textViewWidget1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:textColor="#2f2f2f"
-            android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
@@ -37,10 +27,9 @@
             android:thumb="@drawable/apptheme_scrubber_control_selector_holo_light" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@+id/imageView1"
-            android:layout_below="@+id/textViewWidget1"
             android:orientation="vertical"
             android:weightSum="16" >
 
@@ -51,8 +40,8 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/plus_icon"
                 android:padding="16dp"
-                android:layout_above="@id/text_multi"
-                android:id="@+id/plus_multi"
+                android:layout_above="@+id/text_multi_0"
+                android:id="@+id/plus_multi_0"
                 android:layout_centerInParent="true" />
 
             <TextView
@@ -60,10 +49,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:layout_above="@id/minus_multi"
+                android:text=""
+                android:layout_above="@+id/minus_multi_0"
                 android:layout_centerInParent="true"
-                android:id="@+id/text_multi" />
+                android:textColor="#2f2f2f"
+                android:id="@+id/text_multi_0" />
 
             <ImageButton
                 android:layout_width="50dp"
@@ -76,7 +66,7 @@
                 android:padding="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_centerInParent="true"
-                android:id="@+id/minus_multi" />
+                android:id="@+id/minus_multi_0" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -86,16 +76,6 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="20dp" >
-
-        <TextView
-            android:id="@+id/textViewWidget2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:textColor="#2f2f2f"
-            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -107,16 +87,48 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/ring_volume" >
         </ImageView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@+id/imageView2"
-            android:layout_below="@+id/textViewWidget2"
-            android:layout_centerHorizontal="true"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:weightSum="16" >
 
-        </LinearLayout>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/holo_round_button"
+                android:scaleType="fitXY"
+                android:src="@drawable/plus_icon"
+                android:padding="16dp"
+                android:layout_above="@+id/text_phone_1"
+                android:id="@+id/plus_phone_1"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""
+                android:layout_above="@+id/minus_phone_1"
+                android:layout_centerInParent="true"
+                android:textColor="#2f2f2f"
+                android:id="@+id/text_phone_1" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/holo_round_button"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/minus_icon"
+                android:layout_alignParentBottom="true"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/minus_phone_1" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout
@@ -125,17 +137,6 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="20dp" >
-
-        <TextView
-            android:id="@+id/textViewWidget3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:textColor="#2f2f2f"
-            android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
@@ -146,15 +147,49 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/alarm_volume" >
         </ImageView>
-         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@+id/imageView3"
-            android:layout_below="@+id/textViewWidget3"
-            android:layout_centerHorizontal="true"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:weightSum="16" >
 
-         </LinearLayout>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/holo_round_button"
+                android:scaleType="fitXY"
+                android:src="@drawable/plus_icon"
+                android:padding="16dp"
+                android:layout_above="@+id/text_alarm_2"
+                android:id="@+id/plus_alarm_2"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""
+                android:textColor="#2f2f2f"
+                android:layout_above="@+id/minus_alarm_2"
+                android:layout_centerInParent="true"
+                android:id="@+id/text_alarm_2" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/holo_round_button"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/minus_icon"
+                android:layout_alignParentBottom="true"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/minus_alarm_2" />
+        </RelativeLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
