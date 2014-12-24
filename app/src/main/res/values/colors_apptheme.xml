@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="apptheme_color">#cc0000</color>
+    <color name="base">#F9F9F9</color>
+    <color name="response_base">#F2F2F2</color>
+    <color name="actionbar_background">#AE1010</color>
+    <color name="actionbar_text">#F9F9F9</color>
+    <color name="actionbar_background_dark">#7A0A0A</color>
+    <color name="action_background_clear">#444343</color>
+    <color name="dark_white_background">#E5E5E5</color>
+    <color name="dark_white_background_translucent">#E5E5E522</color>
+    <color name="text_color">#2F2F2F</color>
+    <color name="transparent">#00000000</color>
+</resources>
