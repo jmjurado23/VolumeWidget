@@ -18,7 +18,7 @@
             android:id="@+id/seekBar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/imageView1"
+            android:layout_above="@+id/imageButtonMulti"
             android:layout_below="@+id/textView1"
             android:layout_centerHorizontal="true" />
 
@@ -32,17 +32,16 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imageButtonMulti"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
-            android:src="@drawable/media_volume"
-            android:thumb="@drawable/apptheme_scrubber_control_selector_holo_light" />
+            android:background="@drawable/multi"
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,7 +55,7 @@
             android:id="@+id/seekBar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/imageView2"
+            android:layout_above="@+id/imageButtonPhone"
             android:layout_below="@+id/textView2"
             android:layout_centerHorizontal="true"
             android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
@@ -72,16 +71,16 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imageButtonPhone"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/ring_volume" >
-        </ImageView>
+            android:background="@drawable/phone" >
+        </ImageButton>
     </RelativeLayout>
 
     <RelativeLayout
@@ -95,7 +94,7 @@
             android:id="@+id/seekBar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/imageView3"
+            android:layout_above="@+id/imageButtonAlarm"
             android:layout_below="@+id/textView3"
             android:layout_centerHorizontal="true"
             android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
@@ -111,16 +110,16 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imageButtonAlarm"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/alarm_volume" >
-        </ImageView>
+            android:background="@drawable/alarm" >
+        </ImageButton>
     </RelativeLayout>
 
 </LinearLayout>

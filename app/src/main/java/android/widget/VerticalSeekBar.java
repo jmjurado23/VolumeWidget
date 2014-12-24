@@ -59,5 +59,9 @@ public class VerticalSeekBar extends SeekBar {
         }
         return true;
     }
+
+    public void updateThumb(){
+        onSizeChanged(getWidth(), getHeight(), 0, 0);
+    }
     
 }

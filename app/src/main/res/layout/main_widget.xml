@@ -23,7 +23,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
-            android:src="@drawable/media_volume"
+            android:src="@drawable/multi"
             android:thumb="@drawable/apptheme_scrubber_control_selector_holo_light" />
 
         <RelativeLayout
@@ -85,7 +85,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/ring_volume" >
+            android:src="@drawable/phone" >
         </ImageView>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -145,7 +145,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/alarm_volume" >
+            android:src="@drawable/alarm" >
         </ImageView>
         <RelativeLayout
             android:layout_width="match_parent"
