@@ -13,23 +13,20 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="20dp" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imageButtonMulti2"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
-            android:src="@drawable/multi"
-            android:thumb="@drawable/apptheme_scrubber_control_selector_holo_light" />
-
+            android:background="@drawable/multi"
+            />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/imageView1"
+            android:layout_above="@+id/imageButtonMulti2"
             android:orientation="vertical"
             android:weightSum="16" >
 
@@ -67,6 +64,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_centerInParent="true"
                 android:id="@+id/minus_multi_0" />
+
         </RelativeLayout>
     </RelativeLayout>
 
@@ -76,21 +74,20 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="20dp" >
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/phone" >
-        </ImageView>
+         <ImageButton
+                android:id="@+id/imageButtonPhone2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/phone" >
+        </ImageButton>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/imageView2"
+            android:layout_above="@+id/imageButtonPhone2"
             android:orientation="vertical"
             android:weightSum="16" >
 
@@ -137,20 +134,20 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="20dp" >
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imageButtonAlarm2"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/alarm" >
-        </ImageView>
+            android:background="@drawable/alarm" >
+        </ImageButton>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/imageView3"
+            android:layout_above="@+id/imageButtonAlarm2"
             android:orientation="vertical"
             android:weightSum="16" >
 

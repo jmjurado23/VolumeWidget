@@ -185,7 +185,7 @@ public class MainActivity extends Activity implements OnClickListener {
             multi_button.setBackgroundResource(R.drawable.multi);
         }
 
-        //MultiVolume
+        //PhoneVolume
         if( audioManager.getRingerMode() == AudioManager.RINGER_MODE_SILENT ){
             phone_button.setBackgroundResource(R.drawable.phone_off);
         }else if( audioManager.getRingerMode() == AudioManager.RINGER_MODE_NORMAL){
@@ -194,7 +194,7 @@ public class MainActivity extends Activity implements OnClickListener {
             phone_button.setBackgroundResource(R.drawable.phone_viv);
         }
 
-        //MultiVolume
+        //AudioVolume
         if( audioManager.getStreamVolume(AudioManager.STREAM_ALARM) == 0 ){
             alarm_button.setBackgroundResource(R.drawable.alarm_off);
         }else{
