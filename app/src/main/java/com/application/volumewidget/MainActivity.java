@@ -1,7 +1,10 @@
 package com.application.volumewidget;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +28,14 @@ public class MainActivity extends Activity implements OnClickListener {
     ImageButton multi_button;
     ImageButton phone_button;
     ImageButton alarm_button;
+
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            refreshProgressBarsStatus();
+            updateImageButtonStatus();
+        }
+    };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -53,9 +64,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public void onResume(){
-
-
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.media.VOLUME_CHANGED_ACTION");
+        registerReceiver(receiver, filter);
 
         refreshProgressBarsStatus();
         updateImageButtonStatus();
@@ -63,7 +75,11 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onResume();
     }
 
-
+    @Override
+    protected void onPause() {
+        unregisterReceiver(receiver);
+        super.onPause();
+    }
 
     private void refreshProgressBarsStatus() {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -112,8 +128,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-
             }
 
             @Override
@@ -136,8 +150,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-
             }
 
             @Override
@@ -155,13 +167,10 @@ public class MainActivity extends Activity implements OnClickListener {
                         progress, AudioManager.FLAG_PLAY_SOUND);
 
                 updateImageButtonStatus();
-
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-
             }
 
             @Override
@@ -194,7 +203,7 @@ public class MainActivity extends Activity implements OnClickListener {
             phone_button.setBackgroundResource(R.drawable.phone_viv);
         }
 
-        //AudioVolume
+        //AlarmVolume
         if( audioManager.getStreamVolume(AudioManager.STREAM_ALARM) == 0 ){
             alarm_button.setBackgroundResource(R.drawable.alarm_off);
         }else{
@@ -217,6 +226,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0
                         , AudioManager.FLAG_PLAY_SOUND);
             }
+
         } else if( v.equals(alarm_button)) {
             //Puts volume to max
             if (audioManager.getStreamVolume(AudioManager.STREAM_ALARM) == 0) {
@@ -229,6 +239,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 audioManager.setStreamVolume(AudioManager.STREAM_ALARM, 0
                         , AudioManager.FLAG_PLAY_SOUND);
             }
+
         } else if( v.equals(phone_button)) {
             if( audioManager.getRingerMode() == AudioManager.RINGER_MODE_SILENT || audioManager.getRingerMode() == AudioManager.RINGER_MODE_VIBRATE){
                 phone_button.setBackgroundResource(R.drawable.phone);
@@ -244,6 +255,5 @@ public class MainActivity extends Activity implements OnClickListener {
 
         refreshProgressBarsStatus();
     }
-
 
 }

@@ -61,7 +61,7 @@ public class VolumeWidgetApp extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.imageButtonPhone2, getPendingSelfIntent(context, button_phone));
             views.setOnClickPendingIntent(R.id.imageButtonAlarm2, getPendingSelfIntent(context, button_alarm));
 
-            updateImageButtonStatus(context);
+            updateImageButtonStatus(context, views, audioManager);
 
 
             // Tell the AppWidgetManager to perform an update on the current app widget
@@ -73,7 +73,6 @@ public class VolumeWidgetApp extends AppWidgetProvider {
     
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO Auto-generated method stub
         super.onReceive(context, intent);
 
         String[]  array = intent.getAction().split("_");
@@ -158,7 +157,7 @@ public class VolumeWidgetApp extends AppWidgetProvider {
         }
 
         updateTextOfButtons(context, views, audioManager);
-        updateImageButtonStatus(context);
+        updateImageButtonStatus(context, views, audioManager);
 
         ComponentName componentName= new ComponentName(context, VolumeWidgetApp.class);
 		AppWidgetManager.getInstance(context).updateAppWidget(componentName, views);
@@ -181,9 +180,7 @@ public class VolumeWidgetApp extends AppWidgetProvider {
     /**
      * Update the background of the image button of the application
      */
-    private void updateImageButtonStatus(Context context) {
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.main_widget);
-        AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+    private void updateImageButtonStatus(Context context, RemoteViews views, AudioManager audioManager) {
         //MultiVolume
         if (audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) == 0) {
             views.setInt(R.id.imageButtonMulti2, "setBackgroundResource", R.drawable.multi_off);
