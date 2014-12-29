@@ -7,195 +7,260 @@
     android:fitsSystemWindows="true"
     android:weightSum="3" >
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/relative1"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
+        android:orientation="vertical"
         android:layout_weight="1"
+        android:weightSum="6"
         android:padding="14dp" >
-        <ImageButton
-            android:id="@+id/imageButtonMulti2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/multi"
-            />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/imageButtonMulti2"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:layout_marginBottom="24dp"
-            android:weightSum="16" >
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:src="@drawable/plus_icon"
-                android:padding="10dp"
-                android:layout_above="@+id/text_multi_0"
-                android:id="@+id/plus_multi_0"
-                android:layout_centerInParent="true" />
-
-            <TextView
+            android:weightSum="3" >
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=""
-                android:layout_marginBottom="14dp"
-                android:layout_marginTop="14dp"
-                android:textStyle="bold"
-                android:layout_above="@+id/minus_multi_0"
-                android:layout_centerInParent="true"
-                android:textColor="#2f2f2f"
-                android:id="@+id/text_multi_0" />
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plus_icon"
+                    android:padding="10dp"
+                    android:id="@+id/plus_multi_0" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#2f2f2f"
+                    android:id="@+id/text_multi_0" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/minus_icon"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/minus_multi_0" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2">
             <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonMulti2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"
-                android:src="@drawable/minus_icon"
-                android:layout_alignParentBottom="true"
-                android:padding="10dp"
-                android:layout_marginBottom="16dp"
-                android:layout_centerInParent="true"
-                android:id="@+id/minus_multi_0" />
+                android:layout_marginTop="8dp"
+                android:background="@drawable/multi"
+                />
+            </LinearLayout>
 
-        </RelativeLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
+
+    <LinearLayout
         android:id="@+id/relative2"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
+        android:orientation="vertical"
         android:layout_weight="1"
+        android:weightSum="6"
         android:padding="14dp" >
-         <ImageButton
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="3" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plus_icon"
+                    android:padding="10dp"
+                    android:id="@+id/plus_phone_1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#2f2f2f"
+                    android:id="@+id/text_phone_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/minus_icon"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/minus_phone_1" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2">
+            <ImageButton
+                android:layout_gravity="center"
                 android:id="@+id/imageButtonPhone2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/phone" >
-        </ImageButton>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/imageButtonPhone2"
-            android:orientation="vertical"
-            android:layout_marginBottom="24dp"
-            android:weightSum="16" >
+                android:layout_marginTop="8dp"
+                android:background="@drawable/phone"
+                />
+        </LinearLayout>
 
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:src="@drawable/plus_icon"
-                android:padding="10dp"
-                android:layout_above="@+id/text_phone_1"
-                android:id="@+id/plus_phone_1"
-                android:layout_centerInParent="true" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=""
-                android:textStyle="bold"
-                android:layout_marginBottom="14dp"
-                android:layout_marginTop="14dp"
-                android:layout_above="@+id/minus_phone_1"
-                android:layout_centerInParent="true"
-                android:textColor="#2f2f2f"
-                android:id="@+id/text_phone_1" />
 
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"
-                android:src="@drawable/minus_icon"
-                android:layout_alignParentBottom="true"
-                android:padding="10dp"
-                android:layout_marginBottom="16dp"
-                android:layout_centerInParent="true"
-                android:id="@+id/minus_phone_1" />
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/relative3"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
+        android:orientation="vertical"
         android:layout_weight="1"
+        android:weightSum="6"
         android:padding="14dp" >
-        <ImageButton
-            android:id="@+id/imageButtonAlarm2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/alarm" >
-        </ImageButton>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/imageButtonAlarm2"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-
-            android:layout_marginBottom="24dp"
-            android:weightSum="16" >
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:src="@drawable/plus_icon"
-                android:padding="10dp"
-                android:layout_above="@+id/text_alarm_2"
-                android:id="@+id/plus_alarm_2"
-                android:layout_centerInParent="true" />
-
-            <TextView
+            android:weightSum="3" >
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=""
-                android:layout_marginBottom="14dp"
-                android:layout_marginTop="14dp"
-                android:textStyle="bold"
-                android:textColor="#2f2f2f"
-                android:layout_above="@+id/minus_alarm_2"
-                android:layout_centerInParent="true"
-                android:id="@+id/text_alarm_2" />
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plus_icon"
+                    android:padding="10dp"
+                    android:id="@+id/plus_alarm_2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#2f2f2f"
+                    android:id="@+id/text_alarm_2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/holo_round_button"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/minus_icon"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/minus_alarm_2" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2">
             <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonAlarm2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/holo_round_button"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"
-                android:src="@drawable/minus_icon"
-                android:layout_alignParentBottom="true"
-                android:padding="10dp"
-                android:layout_marginBottom="16dp"
-                android:layout_centerInParent="true"
-                android:id="@+id/minus_alarm_2" />
-        </RelativeLayout>
+                android:layout_marginTop="8dp"
+                android:background="@drawable/alarm"
+                />
+        </LinearLayout>
 
-    </RelativeLayout>
-
+    </LinearLayout>
 </LinearLayout>

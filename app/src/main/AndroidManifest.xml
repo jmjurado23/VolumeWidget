@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.volumewidget"
-    android:versionCode="1"
+    android:versionCode="2"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <meta-data
+               android:name="android.support.PARENT_ACTIVITY"
+               android:value=".MainActivity" />
+        </activity>
 
         <receiver
             android:name=".VolumeWidgetApp"
@@ -34,7 +42,21 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/volume_appwidget_info" />
+                android:resource="@xml/volume_appwidget_info_4_3" />
+        </receiver>
+
+        <receiver
+            android:name=".VolumeWidgetApp2"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/volume_appwidget_info_4_1" />
         </receiver>
     </application>
 

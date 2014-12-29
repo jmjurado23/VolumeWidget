@@ -1,5 +1,8 @@
 <resources>
 
     <string name="app_name">VolumeWidget</string>
+    <string name="information">Information</string>
+    <string name="information2">Developed by:</string>
+    <string name="author">Juan Manuel Jurado\njmjurado23@gmail.com</string>
 
 </resources>

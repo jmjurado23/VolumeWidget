@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2"
+    android:baselineAligned="false"
+    android:fitsSystemWindows="true"
+    android:weightSum="3" >
+
+    <LinearLayout
+        android:id="@+id/relative1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:padding="14dp" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonMulti2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/multi"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/relative2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:padding="14dp" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonPhone2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/phone"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/relative3"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:padding="14dp" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonAlarm2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/alarm"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
