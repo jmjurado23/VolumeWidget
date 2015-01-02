@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -148,6 +149,10 @@ public class MainActivity extends Activity implements OnClickListener {
                 audioManager.setStreamVolume(AudioManager.STREAM_RING,
                         progress, AudioManager.FLAG_PLAY_SOUND);
 
+                if( progress == 0 ){
+                    Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                    vb.vibrate(250);
+                }
                 updateImageButtonStatus();
             }
 
@@ -253,6 +258,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 phone_button.setBackgroundResource(R.drawable.phone_off);
                 audioManager.setStreamVolume(AudioManager.STREAM_RING,
                         0, AudioManager.FLAG_PLAY_SOUND);
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(250);
             }
         }
 

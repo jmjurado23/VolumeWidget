@@ -10,8 +10,14 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.widget.RemoteViews;
 
+/**
+ * Class to manage 4x1 widget that only have buttons to set silent or max volume
+ *
+ * @author jmjurado23
+ */
 public class VolumeWidgetApp2 extends AppWidgetProvider {
 
     private static final String button_multi = "button_multi";
@@ -42,7 +48,6 @@ public class VolumeWidgetApp2 extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.imageButtonAlarm2, getPendingSelfIntent(context, button_alarm));
 
             updateImageButtonStatus(context, views, audioManager);
-
 
             // Tell the AppWidgetManager to perform an update on the current app widget
 //            appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -85,6 +90,8 @@ public class VolumeWidgetApp2 extends AppWidgetProvider {
                     views.setInt(R.id.imageButtonPhone2, "setBackgroundResource", R.drawable.phone_off);
                     audioManager.setStreamVolume(AudioManager.STREAM_RING, 0
                             , AudioManager.FLAG_PLAY_SOUND);
+                    Vibrator vb = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                    vb.vibrate(250);
                 }
 
             } else if( array[1].equals("alarm") ) {

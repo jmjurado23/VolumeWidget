@@ -10,8 +10,15 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.widget.RemoteViews;
 
+/**
+ * Class to manage 4x3 widget that have buttons to manage volume max and silent and variations
+ * on the volume
+ *
+ * @author jmjurado23
+ */
 public class VolumeWidgetApp extends AppWidgetProvider {
 
 
@@ -63,7 +70,6 @@ public class VolumeWidgetApp extends AppWidgetProvider {
 
             updateImageButtonStatus(context, views, audioManager);
 
-
             // Tell the AppWidgetManager to perform an update on the current app widget
 //            appWidgetManager.updateAppWidget(appWidgetId, views);
             ComponentName componentName= new ComponentName(context, VolumeWidgetApp.class);
@@ -97,10 +103,15 @@ public class VolumeWidgetApp extends AppWidgetProvider {
                 audioManager.setStreamVolume(AudioManager.STREAM_RING,
                         getNormalizedVolume(AudioManager.STREAM_RING, 1, context),
                         AudioManager.FLAG_PLAY_SOUND);
-            else
+            else {
                 audioManager.setStreamVolume(AudioManager.STREAM_RING,
                         getNormalizedVolume(AudioManager.STREAM_RING, -1, context),
                         AudioManager.FLAG_PLAY_SOUND);
+                if(audioManager.getStreamVolume(AudioManager.STREAM_RING) == 0){
+                    Vibrator vb = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                    vb.vibrate(250);
+                }
+            }
 
 
         } else if( array[0].equals("alarm") ) {
@@ -138,6 +149,8 @@ public class VolumeWidgetApp extends AppWidgetProvider {
                     views.setInt(R.id.imageButtonPhone2, "setBackgroundResource", R.drawable.phone_off);
                     audioManager.setStreamVolume(AudioManager.STREAM_RING, 0
                             , AudioManager.FLAG_PLAY_SOUND);
+                    Vibrator vb = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                    vb.vibrate(250);
                 }
 
             } else if( array[1].equals("alarm") ) {
@@ -174,7 +187,6 @@ public class VolumeWidgetApp extends AppWidgetProvider {
                 .getStreamMaxVolume(AudioManager.STREAM_RING)) + "%");
         views.setTextViewText(R.id.text_alarm_2, ( audioManager.getStreamVolume(AudioManager.STREAM_ALARM) * 100 / audioManager
                 .getStreamMaxVolume(AudioManager.STREAM_ALARM)) + "%");
-
     }
 
     /**
