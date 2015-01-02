@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VolumeWidget</string>
+    <string name="author">Juan Manuel Jurado\njmjurado23@gmail.com</string>
+    <string name="information">Información</string>
+    <string name="information2">Desarrollado por:</string>
+    <string name="multimedia">Multimedia</string>
+    <string name="ring">Tono</string>
+    <string name="alarm">Alarma</string>
+</resources>

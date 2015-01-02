@@ -1,11 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">VolumeWidget</string>
+    <string name="author">Juan Manuel Jurado\njmjurado23@gmail.com</string>
     <string name="information">Information</string>
     <string name="information2">Developed by:</string>
-    <string name="author">Juan Manuel Jurado\njmjurado23@gmail.com</string>
-    <string name="multimedia">Multimedia </string>
+    <string name="multimedia">Multimedia</string>
     <string name="ring">Ring</string>
     <string name="alarm">Alarm</string>
-
 </resources>
