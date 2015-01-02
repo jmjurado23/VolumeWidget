@@ -3,12 +3,15 @@ VolumeWidget
 
 An android app to manage volume in Android Smartphones.
 
-![alt tag](https://lh4.googleusercontent.com/NO6bBVHZKdn3v6V8G82ZPsVyCyLY0gxMxPZwYiuO2uroImkY3FcgAjOm0ZJ0DhW9L2hsS-75YQE=w1342-h497)
 
+![alt tag](http://googledrive.com/host/0B3BfkvY8NzADc0I3YWJBN1R4QlE)
 ## Specifications
 Min SDK: Android SDK version 14
+
 Target SDK: Android SDK version 19
 
 ## Permissions
 - Vibrate Permissions
 
+## Google play publication
+[Google play link application](https://play.google.com/store/apps/details?id=com.application.volumewidget)
